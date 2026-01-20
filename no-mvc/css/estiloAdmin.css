@@ -1,0 +1,670 @@
+:root {
+    --verdeTierra: #4CAF50;
+    --verdeClaro: #81C784;
+    --azulOceano: #2196F3;
+    --azulClaro: #64B5F6;
+    --amarilloDesieto: #FFEB3B;
+    --naranjaDesierto: #FB8C00;
+    --grisCiudad: #424242;
+    --grisClaro: #9E9E9E;
+}
+
+body {
+    background-color: #1F2937;
+    margin: 0 auto;
+}
+
+body {
+
+    li {
+        color: white
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+.enlace-volver-atras {
+    color: white;
+    font-size: 30px;
+}
+
+.barra-superior-admin {
+    width: 100%;
+    height: auto;
+    background-color: #2e3546;
+    display: flex;
+    align-items: center;
+    padding: 1% 3%;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+}
+
+.barra-superior-admin {
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+}
+
+.perfil-admin {
+    background-color: #ff9900;
+    color: white;
+    padding: 0.6% 1.5%;
+    border-radius: 4px;
+    font-size: 85%;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/*Quitar estilo de enlace*/
+.perfil-admin a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/**************************** MAIN **********************************************/
+.mainEstrecho {
+    background-color: white;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(100, 100, 100, 0.2);
+    width: 40%;
+}
+
+
+/*************************** MAIN TABLA LISTAS  **********************/
+
+.titulo {
+    color: white;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.contenedor-tabla {
+    background-color: #ffffff;
+    color: #000;
+    width: 85%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    display: block;
+    text-align: center;
+}
+
+.contenedor-tabla {
+
+    /* TABLA */
+    .tabla {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+
+    .tabla th {
+        background-color: #ff8f00;
+        padding: 12px;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .tabla td {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .tabla tr:nth-child(odd) {
+        background-color: #fff4a99e;
+    }
+
+    /* BOTONES */
+    .btn-eliminar,
+    .btn-modificar {
+        padding: 8px 15px;
+        font-size: 14px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+    }
+
+    .btn-eliminar {
+        background-color: #ff3b3b;
+    }
+
+    .btn-eliminar:hover {
+        background-color: #d92e2e;
+    }
+
+    .btn-modificar {
+        background-color: #3b82f6;
+    }
+
+    .btn-modificar:hover {
+        background-color: #2563eb;
+    }
+
+    /* BOTÓN CREAR */
+    .contenedor-crear {
+        background-color: #ff8f00;
+        width: 100%;
+        padding: 15px 0;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+
+    .btn-crear {
+        background-color: #ececec;
+        padding: 10px 25px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+
+    }
+
+    .btn-crear:hover {
+        background-color: #d6d6d6;
+    }
+
+
+}
+
+/* FORMULARIO */
+
+.formulario {
+    font-family: "Nunito";
+    width: 95%;
+}
+
+.formulario {
+
+    h1 {
+        text-align: center;
+    }
+
+    label,
+    input,
+    select {
+        display: block;
+        margin: 10px;
+        font-family: "Nunito";
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    input[type="password"],
+    input[type="email"],
+    input[type="text"],
+    input[type="number"] {
+        border: 3px solid;
+        border-color: #E5E7EB;
+        background-color: #F9FAFB;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 3px solid;
+        border-color: #E5E7EB;
+        background-color: #F9FAFB;
+    }
+
+    .seccionBotones {
+        display: flex;
+        flex: 1;
+        justify-content: space-evenly;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .seccionBotones a {
+        text-decoration: none;
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .seccionBotones button {
+        width: 100%;
+    }
+
+    #modificar {
+        background-color: #2E8B57;
+        color: white;
+        margin-top: 20px;
+        font-size: 1.2em;
+        font-size: 1.2em;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        box-sizing: border-box;
+        height: 48px;
+    }
+
+    #cancelar {
+        margin: 0;
+        font-family: "Nunito";
+        background-color: #41404093;
+        color: white;
+        font-size: 1.2em;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        box-sizing: border-box;
+        height: 48px;
+    }
+
+    /* Eliminar button inside form */
+    .btn-eliminar {
+        background-color: #ff3b3b;
+        color: white;
+        font-size: 1.2em;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        box-sizing: border-box;
+        height: 48px;
+    }
+
+    #eliminar {
+        background-color: #ff0000;
+        color: white;
+        margin-top: 20px;
+        font-size: 1.2em;
+        box-sizing: border-box;
+    }
+
+    #acceder {
+        background-color: var(--naranjaDesierto);
+        color: white;
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 20px;
+        font-size: 1.2em;
+    }
+
+    #modificarContrasena {
+        list-style-type: none;
+
+        a {
+            font-family: "Inter", sans-serif;
+            font-size: 0.8em;
+        }
+    }
+
+    #alerta {
+        color: red;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.imagen-aviso-admin {
+    width: 18%;
+    height: auto;
+    margin: 0 auto 4% auto;
+    display: block;
+}
+
+@media (768px <=width <=1024px) {
+    .mainEstrecho {
+        width: 75%;
+    }
+
+    .formulario {
+
+        input,
+        select {
+            margin-right: 20px;
+        }
+
+    }
+}
+
+/*--------------------------------Pantalla de Dashboard Admin-------------------------------*/
+
+/* Estilos Reutilizados de Pantalla de Login Admin:
+ * - .contenedor-principal-admin (Fondo, centrado y posición)
+ * - .barra-superior-admin (Diseño de barra de navegación)
+ * - .perfil-admin (Estilo de etiqueta 'ADMIN')
+*/
+
+.contenido-dashboard {
+    text-align: center;
+    padding-top: 6%;
+}
+
+.texto-principal {
+    font-size: 36px;
+    color: #c95195;
+    margin-bottom: 6%;
+    font-weight: bold;
+}
+
+
+.titulo-dashboard {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+/*quitar estilo de enlace*/
+.titulo-dashboard a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Contenedor de las opciones */
+.contenedor-opciones-admin {
+    width: 100%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+/*quitar estilo de enlace*/
+.contenedor-opciones-admin a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Tarjeta individual de gestión */
+.tarjeta-opcion-admin {
+    width: 8%;
+    padding: 3%;
+    background-color: white;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 0 2% 5% rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 300ms ease, box-shadow 300ms ease;
+    margin: 0 2% 4% 2%;
+}
+
+.tarjeta-opcion-admin:hover {
+    transform: translateY(-3%);
+    box-shadow: 0 4% 8% rgba(0, 0, 0, 0.3);
+}
+
+/* imágenes dentro de los iconos  redondeadas con border*/
+.imagen-opcion {
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 10%;
+}
+
+.descripcion-opcion {
+    font-size: 20px;
+    color: #666;
+    margin: 0;
+}
+
+/*Media query Rastrollo*/
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Header */
+    .barra-superior-admin {
+        width: 100%;
+        display: block;
+        /* hacemos que los elementos del nav se apilen */
+        padding: 10px;
+        text-align: center;
+    }
+
+    .barra-superior-admin ul {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .barra-superior-admin li {
+
+        display: inline-block;
+        margin: 5px 30px;
+
+    }
+
+
+
+    .enlace-volver-atras {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .perfil-admin {
+        font-size: 14px;
+        padding: 3px 8px;
+        display: inline-block;
+        margin-top: 5px;
+    }
+
+
+    /* Dashboard */
+    .contenido-dashboard {
+        padding-top: 30px;
+    }
+
+    .texto-principal {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .titulo-dashboard {
+        font-size: 14px;
+    }
+
+    .contenedor-opciones-admin {
+        width: 100%;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .tarjeta-opcion-admin {
+        width: 70%;
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .imagen-opcion {
+        width: 50px;
+        margin-bottom: 8px;
+    }
+
+    .descripcion-opcion {
+        font-size: 14px;
+    }
+}
+
+/* CREAR CARTAS CON EVENTO */
+.evento-selector {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.evento-selector select {
+    flex: 1;
+}
+
+.btn-crear-evento {
+    height: 44px;
+    flex-shrink: 0;
+    /* Impedir que encoja */
+    padding: 0 15px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* BOTONES */
+.btn-formulario {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-formulario button {
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    flex: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn-formulario button[type="submit"] {
+    background-color: #4CAF50;
+}
+
+.btn-formulario button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* FORMULARIO EVENTO NUEVO */
+#formularioEventoNuevo {
+    display: none;
+    background-color: #34495e;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+
+    input,
+    select {
+        box-sizing: border-box;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 0;
+    }
+
+}
+
+/* MODAL */
+/* Fondo detras del modal */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+    border-radius: 8px;
+    padding: 0;
+}
+
+
+
+
+/* --- Estilos del Modal (Popup) --- */
+#modal-confirm {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo oscuro semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#modal-text {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+#btn-si,
+#btn-no {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btn-si {
+    background-color: #dc3545;
+    /* Rojo para acción destructiva */
+    color: white;
+}
+
+#btn-si:hover {
+    background-color: #c82333;
+}
+
+#btn-no {
+    background-color: #6c757d;
+    /* Gris para cancelar */
+    color: white;
+}
+
+#btn-no:hover {
+    background-color: #5a6268;
+}

@@ -1,0 +1,1515 @@
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #90ee90;
+}
+
+/*Rastrollo*/
+/*--------------------------------Pantalla de acceso-------------------------------*/
+
+
+/* CONTENEDOR PRINCIPAL para no llamar a body y juntar el css con el de mis compañeros */
+.contenedor-principal-acceso {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #90ee90;
+    position: relative;
+    text-align: center;
+    padding-top: 2%;
+}
+
+/* BOTÓN ADMIN */
+.boton-admin {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    padding: 0.5% 1%;
+    background-color: orange;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#iconoContrasena {
+    cursor: pointer;
+}
+
+/* LOGO */
+.seccion-logo {
+    margin-top: 5%;
+}
+
+.logo {
+    width: 15%;
+    height: auto;
+    margin-bottom: 1%;
+}
+
+.subtitulo {
+    font-size: 16px;
+    margin-top: 0.5%;
+    color: rgb(116, 100, 64);
+}
+
+/* CAJA LOGIN */
+.caja-login {
+    width: 28%;
+    min-width: 250px;
+    margin: 2% auto 0 auto;
+    padding: 1.5%;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+/* BOTÓN GOOGLE */
+.boton-login-google {
+    width: 100%;
+    padding: 3% 0;
+    margin-bottom: 1.5%;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 5%;
+    box-sizing: border-box;
+    display: inline-block;
+    align-items: center;
+}
+
+.logo-google {
+    width: 6%;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 4%;
+    display: inline-block;
+}
+
+/*quitar estilo de enlace*/
+
+.boton-login-google {
+    color: black;
+    text-decoration: none;
+}
+
+/* BOTONES login y registro */
+.botones-login {
+    text-align: center;
+    width: 100%;
+    margin: 2% 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+
+.botones-login a {
+    display: inline-block;
+    width: 46%;
+    margin-right: 4%;
+    box-sizing: border-box;
+}
+
+.botones-login a:last-child {
+    margin-right: 0;
+}
+
+/* Estilo de los botones Iniciar Sesión y Registrarse */
+.boton {
+    width: 100%;
+    padding: 3% 0;
+    font-size: 14px;
+    border: none;
+    background-color: #1e90ff;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* INVITADO */
+.boton-invitado {
+    width: 100%;
+    padding: 3% 0;
+    border: none;
+    background-color: #cac6c6;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 40%;
+    box-sizing: border-box;
+}
+
+/*Animaciones de los botones*/
+
+/* Transicione para todos los botones */
+.boton,
+.boton-invitado,
+.boton-login-google,
+.boton-admin {
+    transition: all 0.3s ease;
+}
+
+/* Hover general */
+.boton:hover {
+    background-color: #1c86ee;
+    transform: scale(1.05);
+    /* zoom */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.boton-invitado:hover {
+    background-color: #bfbfbf;
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.boton-login-google:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.boton-admin:hover {
+    background-color: #ff9900;
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*quitar estilo de enlace*/
+.boton-admin a {
+    color: white;
+    text-decoration: none;
+}
+
+/* FOOTER */
+.pie-de-pagina {
+    position: absolute;
+    padding: 5px 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+    color: black;
+    background-color: #666;
+}
+
+/*Rastrollo*/
+/*--------------------------------Pantalla de login-------------------------------*/
+
+/* Estilos Reutilizados de Pantalla de Acceso:
+ * - .boton (Define el tamaño base, color de texto, border-radius y transición de los botones)
+ * - .boton:hover (Define la animación hover base)
+*/
+
+.contenedor-principal-login {
+    width: 100%;
+
+    background-color: #90ee90;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Enlace Volver al inicio ya animado */
+#volver-atras {
+    width: 10%;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.2%;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#volver-atras:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Caja del Formulario */
+.formulario-base {
+    width: 90%;
+    max-width: 40%;
+    margin: 5% auto 0 auto;
+    padding: 3%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 1% 5% rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Encabezados y Subtítulos */
+.formulario-base h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 0.5%;
+}
+
+.formulario-base p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 3%;
+}
+
+/* Etiquetas */
+.formulario-base label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5%;
+    font-size: 0.9em;
+    margin-top: 1.5%;
+    margin-left: 2%;
+}
+
+/* Campos de Entrada (Inputs) */
+.formulario-base input[type="email"],
+.formulario-base input[type="password"],
+.formulario-base input[type="text"] {
+    width: 95%;
+    padding: 2%;
+    margin-bottom: 1.5%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 95%;
+    padding: 2%;
+    margin-bottom: 1.5%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Contenedor relativo para posicionar el icono dentro del input */
+.contenedor-password {
+    position: relative;
+    width: 95%;
+    /* Mismo ancho que los inputs */
+    margin: 0 auto 1.5% auto;
+    /* Centrado horizontal + margen inferior */
+    display: flex;
+    /* Para controlar el ancho del input hijo */
+}
+
+/* El input dentro del contenedor ocupa todo el espacio pero deja sitio al icono */
+/* Aumentamos especificidad para que no pierda estilos al cambiar a type="text" */
+.formulario-base .contenedor-password input[type="password"],
+.formulario-base .contenedor-password input[type="text"] {
+    width: 100%;
+    margin-bottom: 0;
+    /* El margen lo gestiona el contenedor */
+    padding-right: 40px;
+    /* Hueco para el candado */
+}
+
+/* Posicionar el icono a la derecha, centrado verticalmente */
+#iconoContrasena {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* Contenedor de "Recordar sesión" */
+.recordarme-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.formulario-base input[type="checkbox"] {
+    margin-right: 2%;
+}
+
+.recordarme-contenedor label {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Botón de "Iniciar Sesión" */
+.formulario-base .boton {
+    width: 95%;
+    padding: 2% 0;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    margin-top: 1%;
+    cursor: pointer;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+
+}
+
+/*Quitar estilo de submit*/
+.formulario-base .boton button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*Dividir botones cancelar y iniciar sesion*/
+.division-con-flex {
+    display: flex;
+    gap: 2%;
+    width: 100%;
+    margin-top: 1%;
+}
+
+/*Estilizar boton cancelar*/
+.division-con-flex .boton:first-child {
+    background-color: #f44336;
+}
+
+/*quitar estilo de enlace*/
+.division-con-flex .boton:first-child a {
+    color: white;
+    text-decoration: none;
+}
+
+/*Animacion reutilizada */
+.division-con-flex .boton:first-child:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+    box-shadow: 0 1% 5% rgba(0, 0, 0, 0.3);
+}
+
+/* Estilizar boton iniciar sesion*/
+.division-con-flex .boton:last-child {
+    background-color: #4CAF50;
+}
+
+/*Animacion reutilizada */
+.formulario-base .boton:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 1% 5% rgba(0, 0, 0, 0.3);
+}
+
+/* Enlace de Olvido de Contraseña */
+.formulario-base .enlace-olvido {
+    display: block;
+    font-size: 0.9em;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.formulario-base .enlace-olvido:hover {
+    text-decoration: underline;
+}
+
+/* Texto de ayuda (¿No tienes una cuenta?) */
+.formulario-base .texto-ayuda {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 1%;
+}
+
+.formulario-base .texto-ayuda a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.formulario-base .texto-ayuda a:hover {
+    text-decoration: underline;
+}
+
+/*Rastrollo*/
+/*--------------------------------Pantalla de Registro-------------------------------*/
+
+/* Estilos Reutilizados de Pantalla de Login y Acceso:
+ * - .contenedor-principal-login (Fondo, centrado y posición)
+ * - #volver-atras (Botón de retorno)
+ * - .formulario-base (Caja blanca del formulario, títulos h2/p, color de texto general)
+ * - .formulario-base label (Estilos de etiquetas)
+ * - .formulario-base input[type="email"], input[type="password"] (Estilos de campos de email y password)
+ * - .formulario-base .boton (Estilos de botón base verde de formulario)
+ * - .formulario-base .boton:hover (Animación hover de botón)
+ * - .formulario-base .texto-ayuda (Estilos del párrafo que contiene el enlace)
+ * - .division-con-flex (Flexbox para centrar y dividir los botones: Cancelar y Crear Cuenta)
+ * - .division-con-flex .boton:first-child (Estilo de botón Cancelar - Fondo Rojo)
+ * - .division-con-flex .boton:first-child:hover (Animación hover de Cancelar - Rojo)
+ * - .division-con-flex .boton:last-child (Estilo de botón Crear Cuenta - Fondo Verde)
+*/
+
+/* Para el campo de nombre de usuario */
+
+.formulario-base input[type="text"] {
+    width: 95%;
+    padding: 2%;
+    margin-bottom: 1.5%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+/*Miguel/*
+/*--------------------------------Pantalla de Zonas-------------------------------*/
+
+.contenedor-menu-zonas {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 193, 128);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* ENCABEZADO -------------------------------------------- */
+#encabezado {
+    width: 100%;
+    height: 8vh;
+    background: white;
+    padding: 0.5%;
+    border-bottom: 0.2% solid #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#titulo-encabezado {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* MENÚ --------------------------------------------------- */
+#menu-navegacion {
+    display: flex;
+    gap: 8%;
+    margin-right: 5%;
+}
+
+#menu-navegacion a {
+    color: black;
+    text-decoration: none;
+    font-size: 100%;
+    transition: 0.3s;
+}
+
+#menu-navegacion a:hover {
+    transform: scale(1.1);
+}
+
+#seleccion {
+    width: 150px;
+    font-size: 100%;
+    border-radius: 10%;
+    border: 0.4% solid #000;
+    cursor: pointer;
+}
+
+/* CONTENIDO PRINCIPAL ----------------------------------- */
+#contenido-principal {
+    width: 100%;
+    height: 80%;
+    padding-top: 1%;
+    flex: 1;
+}
+
+#logo {
+    width: 10%;
+    height: auto;
+    margin-bottom: 1%;
+}
+
+
+/* BOTÓN ¿CÓMO JUGAR? ------------------------------------ */
+#boton-como-jugar {
+    width: 12%;
+    height: 5%;
+    background: white;
+    border-radius: 5px;
+    font-size: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.25s;
+    border: 0.3vh solid #ccc;
+}
+
+#boton-como-jugar:hover {
+    transform: scale(1.05);
+}
+
+
+/* TARJETAS ---------------------------------------------- */
+#contenedor-tarjetas {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 2%;
+}
+
+.tarjeta {
+    width: 9%;
+    height: 35%;
+    background: white;
+    padding: 1.5%;
+    border-radius: 6%;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.titulo-tarjeta {
+    font-size: 1.7vh;
+    font-weight: bold;
+}
+
+
+/* FOOTER ------------------------------------------------- */
+footer {
+    width: 100%;
+    height: 6%;
+    background: rgb(62, 62, 62);
+    color: white;
+    font-size: 1.9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        overflow: auto;
+        height: auto;
+        min-height: 100%;
+    }
+
+    #contenido-principal {
+        min-height: 82%;
+    }
+
+    #boton-como-jugar {
+        width: 50%;
+    }
+
+    #contenedor-tarjetas {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3%;
+        width: 100%;
+        height: auto;
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .tarjeta {
+        width: 50%;
+        height: auto;
+        gap: 5%;
+    }
+
+    footer {
+        height: 20%;
+        margin-top: auto;
+    }
+}
+
+/*Miguel*/
+/*--------------------------------Pantalla de Juego-------------------------------*/
+/*Esto esta en px*/
+
+
+.contenedor {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    display: flex;
+    overflow: hidden;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Barra de vida */
+.barra-vida {
+    width: 40px;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px;
+    border: 3px solid #ccc;
+    position: absolute;
+    left: 40px;
+    top: 310px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.vida-restante {
+    width: 40px;
+    height: 150px;
+    background: red;
+    border-radius: 15px;
+}
+
+/* Imagen del mundo arriba a la derecha */
+.mundo {
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 300px;
+    height: auto;
+}
+
+/* Problemas */
+.problemas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.carta {
+    width: 150px;
+    height: 200px;
+    background: #b9ddaa;
+    border-radius: 12px;
+    border: 3px solid #a5c494;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.alerta {
+    font-size: 22px;
+    color: #ff4d00;
+}
+
+.planeta {
+    width: 150px;
+    height: 150px;
+}
+
+/* Información carta */
+.info-carta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: 30px auto;
+    width: 75%;
+    /* 75% de 1800px */
+    height: 400px;
+    border-radius: 12px;
+    font-size: 18px;
+    box-shadow: 0 0 10px #0002;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.info-carta div {
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.445);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+
+/* Estado de ronda */
+.estado-ronda {
+    position: absolute;
+    right: 10px;
+    top: 400px;
+    background: #ffffffcc;
+    padding: 15px 25px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    font-size: 18px;
+}
+
+/* Mano del jugador */
+.mano {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 70px;
+}
+
+.carta-mano {
+    width: 120px;
+    height: 180px;
+    background: #a9d398;
+    border-radius: 10px;
+    border: 3px solid #88b47c;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Botones */
+.acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+}
+
+.boton-tablero {
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    width: 120px;
+    text-align: center;
+}
+
+.jugar {
+    background: #2ecc71;
+}
+
+.pasar {
+    background: #a57d6c;
+}
+
+
+
+.Salir {
+    background-color: #000;
+}
+
+/*quitar estilo de enlace*/
+.boton-tablero a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Fondos para cada tablero */
+#bodyBosque {
+    .contenedor {
+        background-image: url("./img/fondoBosque.png");
+    }
+
+    .carta-mano {
+        background-image: url("./img/cartaBosque.png");
+    }
+
+    .problema {
+        background-image: url("./img/eventoBosque.png");
+    }
+}
+
+#bodyCiudad {
+    .contenedor {
+        background-image: url("./img/fondoCiudad.png");
+    }
+
+    .carta-mano {
+        background-image: url("./img/cartaCiudad.png");
+    }
+
+    .problema {
+        background-image: url("./img/eventoCiudad.png");
+    }
+}
+
+#bodyDesierto {
+    .contenedor {
+        background-image: url("./img/fondoDesierto.png");
+    }
+
+    .carta-mano {
+        background-image: url("./img/cartaDesierto.png");
+    }
+
+    .problema {
+        background-image: url("./img/eventoDesierto.png");
+    }
+}
+
+#bodyMar {
+    .contenedor {
+        background-image: url("./img/fondoMar.png");
+    }
+
+    .carta-mano {
+        background-image: url("./img/cartaMar.png");
+    }
+
+    .problema {
+        background-image: url("./img/eventoMar.png");
+    }
+}
+
+/* Estilo de carta general */
+
+.carta p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.titulo-carta {
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.icono-carta {
+    font-size: 5em;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Dimensionado de evento */
+.problema {
+    width: 176px;
+    height: 256px;
+    border: 0;
+    background: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.problema {
+
+    p {
+        margin-top: 10px;
+        margin-left: 7px;
+        margin-right: 7px;
+        margin-bottom: 10px;
+    }
+
+    .icono-carta {
+        font-size: 6em;
+        margin: 0;
+    }
+}
+
+
+.carta {
+    transition: transform 0.3s ease;
+    /* Transición tanto al subir como al bajar */
+}
+
+/*Carta levantada al hacer click*/
+.carta-levantada {
+    transform: translateY(-20px);
+    /* Se levanta 20px */
+    transition: transform 0.3s ease;
+    /* Suavizado del movimiento */
+    z-index: 10;
+    /* Para que se vea sobre las demás cartas */
+}
+
+/*Vega*/
+/*--------------------------------Pantalla de Perfil del usuario-------------------------------*/
+
+/* BODY - reutilizado en otras pantallas */
+#bodyVega {
+    background-color: #E7F4EE;
+}
+
+/* VOLVER - reutilizado en otras pantallas */
+#volverInicio {
+    list-style-type: none;
+}
+
+#volverInicio a {
+    font-family: "Inter", sans-serif;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* MAIN - reutilizado en pantallas: Modificar contraseña, Recuperar contraseña */
+#mainEstrecho {
+    background-color: white;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(100, 100, 100, 0.2);
+    width: 40%;
+}
+
+/* FORMULARIO - reutilizado en pantallas: Modificar contraseña, Recuperar contraseña */
+#formVega {
+    font-family: "Nunito";
+    width: 95%;
+}
+
+#formVega h1 {
+    text-align: center;
+}
+
+#formVega label,
+#formVega input,
+#formVega select {
+    display: block;
+    margin: 10px;
+    font-family: "Nunito";
+}
+
+#formVega input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#formVega input[type="password"],
+#formVega input[type="email"],
+#formVega input[type="text"],
+#formVega input[type="number"] {
+    border: 3px solid;
+    border-color: #E5E7EB;
+    background-color: #F9FAFB;
+}
+
+/* BOTONES - reutilizado en pantallas: Modificar contraseña, Recuperar contraseña */
+#seccionBotones {
+    display: flex;
+    justify-content: space-evenly;
+    width: 107%;
+}
+
+#modificar {
+    background-color: #2E8B57;
+    color: white;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#cancelar {
+    display: block;
+    margin: 10px;
+    font-family: "Nunito";
+    background-color: #ffaa00;
+    color: white;
+    margin-top: 20px;
+    font-size: 1.2em;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#cancelar a {
+    text-decoration: none;
+    color: white;
+}
+
+/* MODIFICAR CONTRASEÑA - específico de pantalla Perfil */
+#modificarContrasena {
+    list-style-type: none;
+}
+
+#modificarContrasena a {
+    font-family: "Inter", sans-serif;
+    font-size: 0.8em;
+}
+
+
+/*Vega*/
+/*--------------------------------Pantalla de Puntuaciones-------------------------------*/
+
+/* BODY - reutilizado de pantalla Perfil */
+/* VOLVER - reutilizado de pantalla Perfil */
+
+/* HEADER / TÍTULO - específico de Puntuaciones */
+#divH1 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    color: #1B5E20;
+}
+
+/* MAIN - específico de Puntuaciones */
+#mainVega {
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(100, 100, 100, 0.2);
+}
+
+/* TABLA - específico de Puntuaciones */
+#tablaPuntuaciones {
+    border-radius: 16px;
+    border-collapse: collapse;
+    font-family: "Inter", sans-serif;
+    width: 100%;
+}
+
+#tablaPuntuaciones tr:nth-child(odd) {
+    background-color: #CFF9CF;
+}
+
+#tablaPuntuaciones td,
+#tablaPuntuaciones th {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#tablaPuntuaciones th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#tablaPuntuaciones th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#tablaPuntuaciones th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#tablaPuntuaciones td {
+    color: #1B5E20;
+}
+
+#tablaPuntuaciones td:last-child {
+    font-weight: bold;
+}
+
+#tablaPuntuaciones td:first-child,
+#tablaPuntuaciones th:first-child {
+    text-align: left;
+    padding-left: 20px;
+}
+
+#tablaPuntuaciones td:last-child,
+#tablaPuntuaciones th:last-child {
+    text-align: right;
+    padding-right: 20px;
+}
+
+
+/*Vega*/
+/*--------------------------------Pantalla de Modificar Contraseña-------------------------------*/
+
+/* BODY - reutilizado de pantalla Perfil */
+/* VOLVER - reutilizado de pantalla Perfil */
+/* MAIN - reutilizado de pantalla Perfil */
+/* FORMULARIO - reutilizado de pantalla Perfil */
+/* BOTONES - reutilizado de pantalla Perfil */
+
+
+/*Vega*/
+/*--------------------------------Pantalla de Recuperar contraseña-------------------------------*/
+
+/* BODY - reutilizado de pantalla Perfil */
+/* VOLVER - reutilizado de pantalla Perfil */
+/* MAIN - reutilizado de pantalla Perfil */
+/* FORMULARIO - reutilizado de pantalla Perfil */
+/* BOTONES - reutilizado de pantalla Perfil */
+
+
+/*Media Query Rastrollo*/
+@media (max-width: 1200px) {
+
+
+    .formulario-base {
+        margin: 50% auto;
+    }
+
+    .contenedor-principal-acceso {
+        height: 100%;
+    }
+
+    .logo {
+        width: 40%;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+    }
+
+    .caja-login {
+        width: 80%;
+        margin: 40% auto;
+    }
+}
+
+/* --- Estilos para el Popup Cómo Jugar y gestion de la sesion  esto es de pantalla de zonas--- */
+
+/* Contenedor del popup: ocupa toda la pantalla y oscurece el fondo */
+#popup-reglas {
+    display: none;
+    /* Oculto por defecto, se muestra con JS */
+    position: fixed;
+    z-index: 1000;
+    /* Se asegura de que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+/* El contenido del popup: la caja blanca con el texto */
+#popup-contenido {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px 30px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 15px;
+    position: relative;
+    /*pal boton de cerrar*/
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s;
+}
+
+/* Animación q me ha dao gpt*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Botón cerrar */
+.cerrar-popup {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar-popup:hover,
+.cerrar-popup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ==================== ESTILO GLOBAL ==================== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #222;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+/* ==================== BOTONES ==================== */
+.btn {
+    padding: 10px 20px;
+    margin: 4px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-crearZona {
+    background-color: #28a745;
+    font-size: 25px;
+    color: white;
+    margin-left: -1140px;
+}
+
+.btn-crearZona:hover {
+    background-color: #218838;
+}
+
+.btn-editar {
+    background-color: #ffc107;
+    color: black;
+}
+
+.btn-editar:hover {
+    background-color: #e0a800;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+.volver-listado {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #dc3545;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+.volver-listado:hover {
+    color: #a71d2a;
+}
+
+/* ==================== TABLA DE DATOS ==================== */
+.tabla-datos {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-datos th,
+.tabla-datos td {
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabla-datos th {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 20px;
+}
+
+.tabla-datos tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.columna-acciones {
+    width: 200px;
+}
+
+/* ==================== ACCIONES EN TABLA ==================== */
+.contenedor-acciones {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.form-accion {
+    display: inline-block;
+}
+
+.form-accion input[type="submit"] {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-accion input[type="submit"]:hover {
+    background-color: #666;
+    color: white;
+}
+
+/* ==================== FORMULARIOS ==================== */
+.form-crear,
+.formulario {
+    width: 350px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.form-crear label,
+.formulario label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-crear input[type="text"],
+.formulario input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    font-size: 14px;
+}
+
+.form-botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.form-crear input[type="submit"],
+.formulario input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.form-crear input[type="submit"]:hover,
+.formulario input[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+
+/* ---------- Vista Confirmar Eliminación ---------- */
+
+.eliminar-box {
+    text-align: center;
+}
+
+.zona-nombre {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* ======== FORMULARIO MODIFICAR ZONA ======== */
+
+.form-modificar {
+    width: 350px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.form-modificar label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-modificar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    font-size: 14px;
+}
+
+.form-modificar input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffc107;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.form-modificar input[type="submit"]:hover {
+    background-color: #e0a800;
+}
+
+.volver-listado {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.volver-listado:hover {
+    color: #a71d2a;
+}
