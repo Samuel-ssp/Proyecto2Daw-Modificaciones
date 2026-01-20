@@ -119,7 +119,15 @@ class CUsuario
             return ["error" => "Usuario no registrado"];
         }
 
+        /*
         if (!password_verify($password, $usuario['contrasena'])) {
+            $this->nombreVista = "login";
+            return ["error" => "Contraseña incorrecta"];
+        }
+        */
+
+        // COMPROBACION TEXTO PLANO
+        if ($password !== $usuario['contrasena']) {
             $this->nombreVista = "login";
             return ["error" => "Contraseña incorrecta"];
         }
