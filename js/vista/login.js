@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
     const regexEmail = /^[^@]+@gmail.com$/i;
     let inputEmail = document.getElementById('email');
     let inputPassword = document.getElementById('password');
@@ -54,3 +54,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+ */

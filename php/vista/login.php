@@ -15,7 +15,7 @@
             <h2>Iniciar Sesión</h2>
             <p>Accede a tu cuenta de Deckology</p>
             <label for="email">Correo Electrónico:</label>
-            <input type="email" name="email" id="email" required>
+            <input type="text" name="email" id="email" required>
             <div id="errorEmail" class="errorFormulario"></div>
 
             <label for="password">Contraseña:</label>

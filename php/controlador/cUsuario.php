@@ -82,10 +82,13 @@ class CUsuario
         }
 
         // Hash de contraseña
-        $passCifrada = password_hash($pass, PASSWORD_DEFAULT);
+        //$passCifrada = password_hash($pass, PASSWORD_DEFAULT);
+
 
         // Insertar en BD
-        $this->modelo->insertar($nombre, $email, $passCifrada);
+        //$this->modelo->insertar($nombre, $email, $passCifrada);
+        $this->modelo->insertar($nombre, $email, $pass);
+        
 
         // Cambiamos a vista login
         $this->nombreVista = "login";
@@ -133,9 +136,9 @@ class CUsuario
         }
 
         $_SESSION['nombreUsuario'] = $usuario['nombre'];
-        $_SESSION['idUsuario'] = $usuario['id_usuario']; // Corregido: la columna es id_usuario, no id
+        $_SESSION['idUsuario'] = $usuario['id_usuario']; 
 
-        // Vista correcta - Redirigir siempre al Punto de Entrada, no a la vista directa
+        
         header("Location: ../no-mvc/pMostrarZonas.php");
         exit();
     }

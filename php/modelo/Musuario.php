@@ -16,6 +16,10 @@ class Usuario extends Conexion
     {
         $sql = "SELECT * FROM usuarios WHERE email = '$email'";
         $resultado = $this->conexion->query($sql);
+
+        echo "<div style='background:#eee; padding:10px; border:1px solid #ccc; margin:10px 0;'>";
+        echo "<strong>SQL Ejecutada:</strong> " . $sql;
+        echo "</div>";
         return $resultado->fetch();
     }
 
