@@ -99,7 +99,7 @@ class CCarta
 
     public function modificarCarta()
     {
-        $this->verificarAdmin();
+        /* $this->verificarAdmin();
 
         // Variables
         $id_evento_antiguo = $_POST['idEventoAntiguo'] ?? null;
@@ -139,6 +139,7 @@ class CCarta
 
         // Modificar carta
         $resultado = $this->carta->modificarCarta($id_evento_nuevo);
+        echo $resultado;
 
         // Si se asignó un nuevo ID de evento  nos aseguramos de que esté marcado 
         if (!empty($id_evento_nuevo)) {
@@ -155,7 +156,29 @@ class CCarta
             // Redirigir 
             header('Location: index.php?c=Carta&m=mostrarModificarCarta&id=' . $_GET["id"]);
             return;
-        }
+        } */
+
+
+
+            $this->verificarAdmin();
+
+            $id_evento_antiguo = $_POST['idEventoAntiguo'] ?? null;
+            $id_evento_nuevo = null;
+
+            $id_evento_nuevo = $_POST["evento"] !== '' ? $_POST["evento"] : null;
+
+            $resultado = $this->carta->modificarCarta($id_evento_nuevo);
+
+            // Fuerzo LA PARADA: Para ver el echo del modelo y que no redireccione
+            echo "<br><strong>Resultado del Modelo:</strong> ";
+            var_dump($resultado); 
+
+            //  no se ejecutará por el die()
+            if ($resultado > 0) {
+                $this->nombreVista = "listarCartas";
+                return $this->carta->obtenerCartas();
+            }
+        
 
     }
 

@@ -51,34 +51,76 @@ class MCarta extends Conexion
         }
     }
 
-    public function modificarCarta($id)
-    {
+    public function modificarCarta($id){
+        // ================================================================
+        // BLOQUE 1: CÓDIGO VULNERABLE (Para la tarea de SQL Injection)
+        // ================================================================
+        // Recogemos los datos directamente de los inputs sin limpiar
+        $nombre = $_POST["nombre"];
+        $descripcion = $_POST["descripcion"];
+        $curacion = $_POST["curacion"];
+        $id_zona = $_POST["zona"];
+        $elimina_id_evento = $id; 
+        $id_icono = $_POST["emoticono"];
+        $id_carta = $_GET["id"];
+
+        // Consulta vulnerable: concatenamos variables directamente en el string
+        $sql = "UPDATE cartas
+                SET nombre = '$nombre', 
+                    descripcion = '$descripcion', 
+                    curacion = $curacion, 
+                    id_zona = $id_zona, 
+                    elimina_id_evento = $elimina_id_evento, 
+                    id_icono = $id_icono
+                WHERE id_carta = $id_carta";
+
+        //Mostrar la consulta por pantalla para las capturas
+        echo "<div>";
+        echo "<strong> DEBUG SQL:</strong> <br><code>" . $sql . "</code>";
+        echo "</div>";
+        
 
         try {
+            // Ejecución directa con query() (Sin protección)
+            return $this->conexion->query($sql);
 
-            $sql = "UPDATE cartas
-                    SET  nombre = :nombre,descripcion = :descripcion, curacion = :curacion, id_zona = :id_zona,elimina_id_evento = :elimina_id_evento, id_icono = :id_icono
-                    WHERE id_carta = :id_carta";
-            $stmt = $this->conexion->prepare($sql);
+        } catch (PDOException $e) {
+            echo "<p style='color:red;'>Error en la consulta: " . $e->getMessage() . "</p>";
+            return false;
+        }
+
+        /* // ================================================================
+        // BLOQUE 2: CÓDIGO ORIGINAL
+        // ================================================================
+        try {
+            $sqlOriginal = "UPDATE cartas
+                            SET nombre = :nombre,
+                                descripcion = :descripcion, 
+                                curacion = :curacion, 
+                                id_zona = :id_zona,
+                                elimina_id_evento = :elimina_id_evento, 
+                                id_icono = :id_icono
+                            WHERE id_carta = :id_carta";
+                            
+            $stmt = $this->conexion->prepare($sqlOriginal);
 
             $stmt->execute([
-
-                ':nombre' => $_POST["nombre"],
-                ':descripcion' => $_POST["descripcion"],
-                ':curacion' => $_POST["curacion"],
-                ':id_zona' => $_POST["zona"],
-                ':elimina_id_evento' => $id,
-                ':id_icono' => $_POST["emoticono"],
-                'id_carta' => $_GET["id"]
+                ':nombre'             => $_POST["nombre"],
+                ':descripcion'        => $_POST["descripcion"],
+                ':curacion'           => $_POST["curacion"],
+                ':id_zona'            => $_POST["zona"],
+                ':elimina_id_evento'  => $id,
+                ':id_icono'           => $_POST["emoticono"],
+                ':id_carta'           => $_GET["id"]
             ]);
 
             return $stmt;
 
         } catch (PDOException $e) {
-
             echo "Error: " . $e->getMessage();
             return false;
         }
+        */
     }
 
     public function eliminarCarta()
